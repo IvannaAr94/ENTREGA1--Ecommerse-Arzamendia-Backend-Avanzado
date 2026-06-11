@@ -1,0 +1,17 @@
+{
+  "name": "entrega1-arzamendia-ecommerce-backend-avanzado",
+  "version": "1.0.0",
+  "description": "API moderna para gestionar productos y carritos con Node.js, Express y persistencia en archivos JSON.",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": ["node", "express", "ecommerce", "backend", "api"],
+  "author": "Ivanna Arzamendia",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

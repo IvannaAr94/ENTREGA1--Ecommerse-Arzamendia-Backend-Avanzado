@@ -1,0 +1,35 @@
+[
+  {
+    "id": "prod_172000000001",
+    "title": "Auriculares Urban Pro",
+    "description": "Auriculares bluetooth con cancelación de ruido, batería de larga duración y diseño moderno.",
+    "code": "AUR-UP-001",
+    "price": 89999,
+    "status": true,
+    "stock": 18,
+    "category": "audio",
+    "thumbnails": ["https://images.unsplash.com/photo-1505740420928-5e560c06d30e"]
+  },
+  {
+    "id": "prod_172000000002",
+    "title": "Smartwatch Neo Fit",
+    "description": "Reloj inteligente resistente al agua con monitor cardíaco, notificaciones y modo deporte.",
+    "code": "SWT-NF-002",
+    "price": 64999,
+    "status": true,
+    "stock": 12,
+    "category": "wearables",
+    "thumbnails": ["https://images.unsplash.com/photo-1523275335684-37898b6baf30"]
+  },
+  {
+    "id": "prod_172000000003",
+    "title": "Mochila Tech Minimal",
+    "description": "Mochila urbana con compartimiento para notebook, tela impermeable y puerto USB externo.",
+    "code": "MCH-TM-003",
+    "price": 54999,
+    "status": true,
+    "stock": 25,
+    "category": "accesorios",
+    "thumbnails": ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62"]
+  }
+]
