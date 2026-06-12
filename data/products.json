@@ -1,6 +1,6 @@
 [
   {
-    "id": "prod_172000000001",
+    "id": 1,
     "title": "Auriculares Urban Pro",
     "description": "Auriculares bluetooth con cancelación de ruido, batería de larga duración y diseño moderno.",
     "code": "AUR-UP-001",
@@ -8,28 +8,47 @@
     "status": true,
     "stock": 18,
     "category": "audio",
-    "thumbnails": ["https://images.unsplash.com/photo-1505740420928-5e560c06d30e"]
+    "thumbnails": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+    ]
   },
   {
-    "id": "prod_172000000002",
+    "id": 2,
     "title": "Smartwatch Neo Fit",
     "description": "Reloj inteligente resistente al agua con monitor cardíaco, notificaciones y modo deporte.",
     "code": "SWT-NF-002",
-    "price": 64999,
+    "price": 3000,
     "status": true,
     "stock": 12,
     "category": "wearables",
-    "thumbnails": ["https://images.unsplash.com/photo-1523275335684-37898b6baf30"]
+    "thumbnails": [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+    ]
   },
   {
-    "id": "prod_172000000003",
-    "title": "Mochila Tech Minimal",
-    "description": "Mochila urbana con compartimiento para notebook, tela impermeable y puerto USB externo.",
-    "code": "MCH-TM-003",
-    "price": 54999,
+    "id": 4,
+    "title": "Notebook Gamer",
+    "description": "Notebook RTX 4060",
+    "code": "NB002",
+    "price": 2500,
     "status": true,
-    "stock": 25,
-    "category": "accesorios",
-    "thumbnails": ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62"]
+    "stock": 10,
+    "category": "Tecnologia",
+    "thumbnails": [
+      "https://imagen.com/notebook.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Notebook Gamer",
+    "description": "Notebook RTX 4060",
+    "code": "NB003",
+    "price": 2500,
+    "status": true,
+    "stock": 10,
+    "category": "Tecnologia",
+    "thumbnails": [
+      "https://imagen.com/notebook.jpg"
+    ]
   }
 ]

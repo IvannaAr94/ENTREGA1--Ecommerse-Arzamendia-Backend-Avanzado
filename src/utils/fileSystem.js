@@ -1,8 +1,7 @@
 // =====================================================
 // UTILIDAD: fileSystem.js
-// ¿Qué hace este archivo?
 // Centraliza la lectura y escritura de archivos JSON.
-// Así evitamos repetir código en ProductManager y CartManager.
+// Asi evitamos repetir código en ProductManager y CartManager.
 // =====================================================
 
 import fs from 'fs/promises';

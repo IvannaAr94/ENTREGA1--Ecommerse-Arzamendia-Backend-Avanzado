@@ -1,7 +1,6 @@
 // =====================================================
 // MIDDLEWARE: errorHandler.js
-// ¿Qué hace este archivo?
-// Captura errores inesperados para responder prolijo
+// Captura errores inesperados para responder prolijoo
 // y evitar que el servidor se rompa sin explicación.
 // =====================================================
 

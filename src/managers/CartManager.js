@@ -1,9 +1,8 @@
 // =====================================================
 // MANAGER: CartManager.js
-// ¿Qué hace esta clase?
-// Se encarga de crear carritos, buscarlos por id y
+// Se encarga de crear carritos, buscarlos por ID y
 // agregar productos aumentando quantity si ya existían.
-// =====================================================
+// =====================================================0
 
 import { readJsonFile, writeJsonFile } from '../utils/fileSystem.js';
 
@@ -13,13 +12,24 @@ export default class CartManager {
     this.filePath = filePath;
   }
 
+
+  // GENERADOR DE ID SIMPLEe
+  // Busca el id numérico más alto y suma 1.
+  // Ejemplo: si existen 1, 2 y 3, el próximo carrito será 4.
+  generateNextId(carts) {
+    if (carts.length === 0) return 1;
+
+    const numericIds = carts.map((cart) => Number(cart.id)).filter((id) => !Number.isNaN(id));
+    return Math.max(...numericIds, 0) + 1;
+  }
+
   // POST /api/carts
   // Crea un carrito nuevo vacío.
   async createCart() {
     const carts = await readJsonFile(this.filePath, []);
 
     const newCart = {
-      id: `cart_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
+      id: this.generateNextId(carts),
       products: []
     };
 
@@ -32,7 +42,7 @@ export default class CartManager {
   // Devuelve el carrito completo según su id.
   async getCartById(cartId) {
     const carts = await readJsonFile(this.filePath, []);
-    return carts.find((cart) => cart.id === cartId);
+    return carts.find((cart) => String(cart.id) === String(cartId));
   }
 
   // POST /api/carts/:cid/product/:pid
@@ -40,17 +50,17 @@ export default class CartManager {
   // Si ya estaba en el carrito, aumenta quantity en 1.
   async addProductToCart(cartId, productId) {
     const carts = await readJsonFile(this.filePath, []);
-    const cartIndex = carts.findIndex((cart) => cart.id === cartId);
+    const cartIndex = carts.findIndex((cart) => String(cart.id) === String(cartId));
 
     if (cartIndex === -1) return null;
 
-    const productInCart = carts[cartIndex].products.find((item) => item.product === productId);
+    const productInCart = carts[cartIndex].products.find((item) => String(item.product) === String(productId));
 
     if (productInCart) {
       productInCart.quantity += 1;
     } else {
       carts[cartIndex].products.push({
-        product: productId,
+        product: Number(productId),
         quantity: 1
       });
     }

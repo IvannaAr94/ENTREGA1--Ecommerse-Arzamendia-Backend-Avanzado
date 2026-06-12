@@ -1,6 +1,5 @@
 // =====================================================
 // MANAGER: ProductManager.js
-// ¿Qué hace esta clase?
 // Se encarga de leer, crear, actualizar y eliminar
 // productos dentro del archivo data/products.json.
 // =====================================================
@@ -13,6 +12,16 @@ export default class ProductManager {
     this.filePath = filePath;
   }
 
+  // GENERADOR DE ID SIMPLE
+  // Busca el id numérico más alto y suma 1.
+  // Ejemplo: si existen 1, 2 y 3, el próximo será 4.
+  generateNextId(products) {
+    if (products.length === 0) return 1;
+
+    const numericIds = products.map((product) => Number(product.id)).filter((id) => !Number.isNaN(id));
+    return Math.max(...numericIds, 0) + 1;
+  }
+
   // GET /api/products
   // Devuelve todos los productos guardados.
   async getProducts() {
@@ -20,10 +29,10 @@ export default class ProductManager {
   }
 
   // GET /api/products/:pid
-  // Busca un producto específico por su id.
+  // Busca un producto específico por su ID.
   async getProductById(productId) {
     const products = await this.getProducts();
-    return products.find((product) => product.id === productId);
+    return products.find((product) => String(product.id) === String(productId));
   }
 
   // POST /api/products
@@ -37,7 +46,7 @@ export default class ProductManager {
     }
 
     const newProduct = {
-      id: `prod_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
+      id: this.generateNextId(products),
       title: productData.title,
       description: productData.description,
       code: productData.code,
@@ -54,10 +63,10 @@ export default class ProductManager {
   }
 
   // PUT /api/products/:pid
-  // Actualiza un producto existente, pero NO permite modificar el id.
+  // Actualiza un producto existente, pero NO permite modificar el ID.
   async updateProduct(productId, updates) {
     const products = await this.getProducts();
-    const productIndex = products.findIndex((product) => product.id === productId);
+    const productIndex = products.findIndex((product) => String(product.id) === String(productId));
 
     if (productIndex === -1) return null;
 
@@ -73,10 +82,10 @@ export default class ProductManager {
   }
 
   // DELETE /api/products/:pid
-  // Elimina un producto según el id recibido por parámetro.
+  // Elimina un producto según el ID recibido por parámetro.
   async deleteProduct(productId) {
     const products = await this.getProducts();
-    const filteredProducts = products.filter((product) => product.id !== productId);
+    const filteredProducts = products.filter((product) => String(product.id) !== String(productId));
 
     if (products.length === filteredProducts.length) return false;
 

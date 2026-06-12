@@ -13,6 +13,7 @@ La información se guarda en archivos JSON: `products.json` y `carts.json`.
 - Persistencia con archivos JSON.
 - Código comentado para entender qué hace cada parte.
 - Productos de ejemplo con estilo ecommerce moderno.
+- IDs simples autogenerados: 1, 2, 3, 4...
 - Validaciones básicas para evitar datos incompletos.
 
 ---
@@ -20,7 +21,7 @@ La información se guarda en archivos JSON: `products.json` y `carts.json`.
 ## Estructura del proyecto
 
 ```txt
-ENTREGA1-ARZAMENDIA-Ecommerce-Backend-Avanzado/
+ENTREGA1-ARZAMENDIA-Ecommerce-Backend-Avanzado-IDS-Simples/
 │
 ├── data/
 │   ├── products.json
@@ -56,7 +57,7 @@ ENTREGA1-ARZAMENDIA-Ecommerce-Backend-Avanzado/
 ### 1. Entrar a la carpeta del proyecto
 
 ```bash
-cd ENTREGA1-ARZAMENDIA-Ecommerce-Backend-Avanzado
+cd ENTREGA1-ARZAMENDIA-Ecommerce-Backend-Avanzado-IDS-Simples
 ```
 
 ### 2. Instalar dependencias
@@ -96,7 +97,7 @@ GET http://localhost:8080/api/products
 ### Buscar producto por ID
 
 ```http
-GET http://localhost:8080/api/products/prod_172000000001
+GET http://localhost:8080/api/products/1
 ```
 
 ### Crear producto
@@ -123,7 +124,7 @@ Body JSON para Insomnia:
 ### Actualizar producto
 
 ```http
-PUT http://localhost:8080/api/products/prod_172000000001
+PUT http://localhost:8080/api/products/1
 ```
 
 Body JSON de ejemplo:
@@ -138,7 +139,7 @@ Body JSON de ejemplo:
 ### Eliminar producto
 
 ```http
-DELETE http://localhost:8080/api/products/prod_172000000001
+DELETE http://localhost:8080/api/products/1
 ```
 
 ---
@@ -154,13 +155,13 @@ POST http://localhost:8080/api/carts
 ### Ver productos de un carrito
 
 ```http
-GET http://localhost:8080/api/carts/cart_123
+GET http://localhost:8080/api/carts/1
 ```
 
 ### Agregar producto a un carrito
 
 ```http
-POST http://localhost:8080/api/carts/cart_123/product/prod_172000000001
+POST http://localhost:8080/api/carts/1/product/1
 ```
 
 Importante: si el producto ya existe en el carrito, no se duplica. Solo aumenta `quantity` en 1.
@@ -169,7 +170,7 @@ Importante: si el producto ya existe en el carrito, no se duplica. Solo aumenta 
 
 ## Subir a GitHub
 
-No subir la carpeta `node_modules`. Ya está ignorada en `.gitignore`.
+acordarme***No subir la carpeta `node_modules`. Ya está ignorada en `.gitignore`.
 
 ```bash
 git init
@@ -186,4 +187,21 @@ Si el repositorio ya estaba conectado, usar solamente:
 git add .
 git commit -m "Completo entrega 1 ecommerce backend avanzado"
 git push
+```
+
+---
+
+## Links rápidos para Insomnia con IDs
+
+URLs:
+
+```txt
+GET    http://localhost:8080/api/products
+GET    http://localhost:8080/api/products/1
+POST   http://localhost:8080/api/products
+PUT    http://localhost:8080/api/products/2
+DELETE http://localhost:8080/api/products/3
+POST   http://localhost:8080/api/carts
+GET    http://localhost:8080/api/carts/1
+POST   http://localhost:8080/api/carts/1/product/1
 ```

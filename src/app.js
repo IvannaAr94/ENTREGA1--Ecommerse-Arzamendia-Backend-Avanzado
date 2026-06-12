@@ -1,6 +1,5 @@
 // =====================================================
 // ARCHIVO PRINCIPAL: app.js
-// ¿Qué hace este archivo?
 // Levanta el servidor Express, configura JSON,
 // conecta las rutas y escucha en el puerto 8080.
 // =====================================================
@@ -20,7 +19,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.json({
     status: 'success',
-    message: 'API Ecommerce Moderna funcionando correctamente 🚀',
+    message: 'API Ecommerce Moderna funcionando correctamente ',
     endpoints: {
       products: '/api/products',
       carts: '/api/carts'
@@ -28,7 +27,7 @@ app.get('/', (req, res) => {
   });
 });
 
-// Rutas principales pedidas por la consigna.
+// Rutas principales
 app.use('/api/products', productsRouter);
 app.use('/api/carts', cartsRouter);
 

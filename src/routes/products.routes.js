@@ -1,6 +1,5 @@
 // =====================================================
 // ROUTER: products.routes.js
-// ¿Qué hace este archivo?
 // Define todos los endpoints de productos:
 // GET, GET por id, POST, PUT y DELETE.
 // =====================================================

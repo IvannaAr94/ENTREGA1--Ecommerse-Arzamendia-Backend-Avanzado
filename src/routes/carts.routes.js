@@ -1,6 +1,4 @@
-// =====================================================
 // ROUTER: carts.routes.js
-// ¿Qué hace este archivo?
 // Define todos los endpoints de carritos:
 // crear carrito, ver carrito y agregar producto al carrito.
 // =====================================================

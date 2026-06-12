@@ -1,6 +1,5 @@
 // =====================================================
 // UTILIDAD: validators.js
-// ¿Qué hace este archivo?
 // Valida que los datos recibidos por body estén completos
 // antes de guardar productos o carritos.
 // =====================================================
