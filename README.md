@@ -207,7 +207,7 @@ git push origin main
 Repositorio:
 
 ```txt
-[(https://github.com/IvannaAr94/ENTREGA2-Ecommerse-Arzamendia-Backend-Avanzado)]
+https://github.com/IvannaAr94/ENTREGA2-Ecommerse-Arzamendia-Backend-Avanzado
 ```
 
 ---
