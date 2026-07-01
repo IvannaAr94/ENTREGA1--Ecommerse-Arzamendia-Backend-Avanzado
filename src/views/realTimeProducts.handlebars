@@ -1,0 +1,52 @@
+<section class="hero">
+  <h2>Productos en tiempo real</h2>
+  <p>Esta vista trabaja con WebSockets. Al crear o eliminar productos, la lista se actualiza automáticamente.</p>
+</section>
+
+<section class="form-section">
+  <h3>Agregar producto</h3>
+
+  <form id="productForm" class="product-form">
+    <input type="text" name="title" placeholder="Título" required>
+    <input type="text" name="description" placeholder="Descripción" required>
+    <input type="text" name="code" placeholder="Código único" required>
+    <input type="number" name="price" placeholder="Precio" min="1" required>
+    <input type="number" name="stock" placeholder="Stock" min="0" required>
+    <input type="text" name="category" placeholder="Categoría" required>
+    <input type="text" name="thumbnails" placeholder="URL de imagen opcional">
+
+    <select name="status" required>
+      <option value="true">Activo</option>
+      <option value="false">Inactivo</option>
+    </select>
+
+    <button type="submit">Crear producto</button>
+  </form>
+
+  <p id="errorMessage" class="error-message"></p>
+</section>
+
+<section>
+  <h3>Lista actualizada</h3>
+  <div id="productsContainer" class="products-grid">
+    {{#if products.length}}
+      {{#each products}}
+        <article class="product-card">
+          <h3>{{this.title}}</h3>
+          <p>{{this.description}}</p>
+          <p><strong>ID:</strong> {{this.id}}</p>
+          <p><strong>Código:</strong> {{this.code}}</p>
+          <p><strong>Precio:</strong> ${{this.price}}</p>
+          <p><strong>Stock:</strong> {{this.stock}}</p>
+          <p><strong>Categoría:</strong> {{this.category}}</p>
+          <button class="delete-button" data-id="{{this.id}}">Eliminar</button>
+        </article>
+      {{/each}}
+    {{else}}
+      <p class="empty-message">Todavía no hay productos cargados.</p>
+    {{/if}}
+  </div>
+</section>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realtimeproducts.js"></script>

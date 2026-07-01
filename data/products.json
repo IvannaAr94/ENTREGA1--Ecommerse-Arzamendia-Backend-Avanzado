@@ -13,19 +13,6 @@
     ]
   },
   {
-    "id": 2,
-    "title": "Smartwatch Neo Fit",
-    "description": "Reloj inteligente resistente al agua con monitor cardíaco, notificaciones y modo deporte.",
-    "code": "SWT-NF-002",
-    "price": 3000,
-    "status": true,
-    "stock": 12,
-    "category": "wearables",
-    "thumbnails": [
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30"
-    ]
-  },
-  {
     "id": 4,
     "title": "Notebook Gamer",
     "description": "Notebook RTX 4060",
@@ -43,12 +30,51 @@
     "title": "Notebook Gamer",
     "description": "Notebook RTX 4060",
     "code": "NB003",
-    "price": 2500,
+    "price": 2199000,
     "status": true,
     "stock": 10,
     "category": "Tecnologia",
     "thumbnails": [
       "https://imagen.com/notebook.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Motorola Edge 70 Pro ",
+    "description": "gama media-alta premium que destaca por su cámara asistida por IA, gran autonomía y pantalla envolvente.",
+    "code": "MOTO-EDGE-70",
+    "price": 1400999,
+    "status": true,
+    "stock": 5,
+    "category": "Celular",
+    "thumbnails": [
+      "https://armoto.vtexassets.com/arquivos/ids/172731-1600-auto?v=639149949542070000&width=1600&height=auto&aspect=true"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Smartwatch Motorola Moto Watch Fit",
+    "description": "Motorola Reloj inteligente — El moto watch fit funciona de forma fluida con cualquier dispositivo Android. Usalo durante más de dos semanas con una sola carga y disfrútalo sin interrupciones.",
+    "code": "SMART-MOTOWATCH-00",
+    "price": 140000,
+    "status": true,
+    "stock": 20,
+    "category": "Reloj",
+    "thumbnails": [
+      "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTeRcA8CYvs4_iG25ycEQPnMHlRmlydK5DrWaavyJbB4ZaBwbctZt7NuBS0oCjNl2b8Le7J8yn7jpK2GF1Rh21jRbsTPa7eDsxfdedWVB_AzIBMwjOwF73V"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Teclado Gamer",
+    "description": "RGB mecánico",
+    "code": "TEC001",
+    "price": 35000,
+    "status": true,
+    "stock": 15,
+    "category": "Periféricos",
+    "thumbnails": [
+      "https://..."
     ]
   }
 ]

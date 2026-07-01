@@ -1,17 +1,19 @@
 {
-  "name": "entrega1-arzamendia-ecommerce-backend-avanzado",
-  "version": "1.0.0",
-  "description": "API moderna para gestionar productos y carritos con Node.js, Express y persistencia en archivos JSON.",
+  "name": "entrega2-arzamendia-ecommerce-backend-avanzado",
+  "version": "2.0.0",
+  "description": "Entrega 2 Backend Avanzado: ecommerce con Express, Handlebars y WebSockets usando Socket.io.",
   "main": "src/app.js",
   "type": "module",
   "scripts": {
     "start": "node src/app.js",
     "dev": "node --watch src/app.js"
   },
-  "keywords": ["node", "express", "ecommerce", "backend", "api"],
+  "keywords": ["node", "express", "ecommerce", "backend", "handlebars", "socket.io", "websockets"],
   "author": "Ivanna Arzamendia",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.3",
+    "socket.io": "^4.7.5"
   }
 }

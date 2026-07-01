@@ -1,27 +1,30 @@
-# Entrega N° 1 - Ecommerce Moderno Backend Avanzado
+# Entrega N° 2 - Ecommerce Backend Avanzado
 
-API backend para gestionar **productos** y **carritos de compra** usando **Node.js + Express**.  
-La información se guarda en archivos JSON: `products.json` y `carts.json`.
+Proyecto backend para gestionar productos y carritos usando **Node.js**, **Express**, **Handlebars** y **Socket.io**.
+
+La información se guarda en archivos JSON dentro de la carpeta `data`.
 
 ---
 
-## ¿Qué incluye este proyecto?
+## ¿Qué incluye esta entrega?
 
 - Servidor con Express en el puerto **8080**.
-- Rutas para productos en `/api/products`.
-- Rutas para carritos en `/api/carts`.
-- Persistencia con archivos JSON.
-- Código comentado para entender qué hace cada parte.
-- Productos de ejemplo con estilo ecommerce moderno.
-- IDs simples autogenerados: 1, 2, 3, 4...
-- Validaciones básicas para evitar datos incompletos.
+- Motor de plantillas **Handlebars** configurado.
+- Servidor de WebSockets con **Socket.io**.
+- Vista `home.handlebars` en el endpoint `/`.
+- Vista `realTimeProducts.handlebars` en el endpoint `/realtimeproducts`.
+- Lista de productos actualizada automáticamente al crear o eliminar productos.
+- Formulario en la vista realtime para crear productos usando WebSockets.
+- Botón para eliminar productos usando WebSockets.
+- Rutas API de productos y carritos de la Entrega 1 conservadas.
+- Persistencia en `products.json` y `carts.json`.
 
 ---
 
 ## Estructura del proyecto
 
 ```txt
-ENTREGA1-ARZAMENDIA-Ecommerce-Backend-Avanzado-IDS-Simples/
+ENTREGA2-Arzamendia-Backend-Avanzado/
 │
 ├── data/
 │   ├── products.json
@@ -35,13 +38,26 @@ ENTREGA1-ARZAMENDIA-Ecommerce-Backend-Avanzado-IDS-Simples/
 │   ├── middlewares/
 │   │   └── errorHandler.js
 │   │
+│   ├── public/
+│   │   ├── css/
+│   │   │   └── styles.css
+│   │   └── js/
+│   │       └── realtimeproducts.js
+│   │
 │   ├── routes/
 │   │   ├── products.routes.js
-│   │   └── carts.routes.js
+│   │   ├── carts.routes.js
+│   │   └── views.routes.js
 │   │
 │   ├── utils/
 │   │   ├── fileSystem.js
 │   │   └── validators.js
+│   │
+│   ├── views/
+│   │   ├── layouts/
+│   │   │   └── main.handlebars
+│   │   ├── home.handlebars
+│   │   └── realTimeProducts.handlebars
 │   │
 │   └── app.js
 │
@@ -52,12 +68,12 @@ ENTREGA1-ARZAMENDIA-Ecommerce-Backend-Avanzado-IDS-Simples/
 
 ---
 
-## Comandos para usar en Windows desde la terminal de Visual Studio Code
+## Comandos para usar en Windows desde Visual Studio Code
 
 ### 1. Entrar a la carpeta del proyecto
 
 ```bash
-cd ENTREGA1-ARZAMENDIA-Ecommerce-Backend-Avanzado-IDS-Simples
+cd ENTREGA2-Arzamendia-Backend-Avanzado
 ```
 
 ### 2. Instalar dependencias
@@ -78,17 +94,37 @@ También se puede usar:
 npm start
 ```
 
-### 4. Abrir en el navegador
+---
+
+## Vistas solicitadas por la consigna
+
+### Home
 
 ```txt
-http://localhost:8080
+http://localhost:8080/
 ```
+
+Muestra la lista de productos usando `home.handlebars`.
+
+### Real Time Products
+
+```txt
+http://localhost:8080/realtimeproducts
+```
+
+Muestra la lista de productos usando `realTimeProducts.handlebars`.
+
+En esta vista se puede:
+
+- Crear un producto desde el formulario.
+- Eliminar productos con el botón **Eliminar**.
+- Ver la actualización automática de la lista sin recargar la página.
 
 ---
 
 ## Endpoints de productos
 
-### Listar todos los productos
+### Listar productos
 
 ```http
 GET http://localhost:8080/api/products
@@ -127,15 +163,6 @@ Body JSON para Insomnia:
 PUT http://localhost:8080/api/products/1
 ```
 
-Body JSON de ejemplo:
-
-```json
-{
-  "price": 79999,
-  "stock": 10
-}
-```
-
 ### Eliminar producto
 
 ```http
@@ -146,62 +173,45 @@ DELETE http://localhost:8080/api/products/1
 
 ## Endpoints de carritos
 
-### Crear carrito vacío
+### Crear carrito
 
 ```http
 POST http://localhost:8080/api/carts
 ```
 
-### Ver productos de un carrito
+### Ver carrito
 
 ```http
 GET http://localhost:8080/api/carts/1
 ```
 
-### Agregar producto a un carrito
+### Agregar producto al carrito
 
 ```http
 POST http://localhost:8080/api/carts/1/product/1
 ```
 
-Importante: si el producto ya existe en el carrito, no se duplica. Solo aumenta `quantity` en 1.
-
 ---
 
-## Subir a GitHub
+## Subir cambios al mismo repositorio de GitHub
 
-acordarme***No subir la carpeta `node_modules`. Ya está ignorada en `.gitignore`.
-
-```bash
-git init
-git add .
-git commit -m "Entrega 1 ecommerce backend avanzado"
-git branch -M main
-git remote add origin https://github.com/IvannaAr94/ENTREGA1--Ecommerse-Arzamendia-Backend-Avanzado.git
-git push -u origin main
-```
-
-Si el repositorio ya estaba conectado, usar solamente:
+Como se usa el mismo repositorio de la Entrega 1, no hace falta crear otro remoto. Desde la carpeta del proyecto:
 
 ```bash
+git status
 git add .
-git commit -m "Completo entrega 1 ecommerce backend avanzado"
-git push
+git commit -m "Entrega 2 handlebars y websockets"
+git push origin main
 ```
 
----
-
-## Links rápidos para Insomnia con IDs
-
-URLs:
+Repositorio:
 
 ```txt
-GET    http://localhost:8080/api/products
-GET    http://localhost:8080/api/products/1
-POST   http://localhost:8080/api/products
-PUT    http://localhost:8080/api/products/2
-DELETE http://localhost:8080/api/products/3
-POST   http://localhost:8080/api/carts
-GET    http://localhost:8080/api/carts/1
-POST   http://localhost:8080/api/carts/1/product/1
+https://github.com/IvannaAr94/ENTREGA1--Ecommerse-Arzamendia-Backend-Avanzado
 ```
+
+---
+
+## Importante
+
+No subir la carpeta `node_modules`. Ya está ignorada por `.gitignore`.

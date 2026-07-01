@@ -51,6 +51,12 @@ router.post('/', async (req, res, next) => {
     }
 
     const newProduct = await productManager.addProduct(req.body);
+
+    // Si se crea un producto por HTTP, avisamos también a la vista realtime.
+    const io = req.app.get('socketio');
+    const products = await productManager.getProducts();
+    io.emit('productsList', products);
+
     res.status(201).json({ status: 'success', message: 'Producto creado correctamente.', payload: newProduct });
   } catch (error) {
     res.status(400).json({ status: 'error', message: error.message });
@@ -82,6 +88,11 @@ router.delete('/:pid', async (req, res, next) => {
     if (!deleted) {
       return res.status(404).json({ status: 'error', message: 'Producto no encontrado.' });
     }
+
+    // Si se elimina un producto por HTTP, avisamos también a la vista realtime.
+    const io = req.app.get('socketio');
+    const products = await productManager.getProducts();
+    io.emit('productsList', products);
 
     res.json({ status: 'success', message: 'Producto eliminado correctamente.' });
   } catch (error) {
