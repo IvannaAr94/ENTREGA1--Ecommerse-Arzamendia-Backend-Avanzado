@@ -1,116 +1,1000 @@
-* {
-  box-sizing: border-box;
+/* =====================================================
+   VARIABLES GENERALES
+   Guardan los colores y efectos principales para poder
+   reutilizarlos en todo el archivo sin repetir valores.
+   ===================================================== */
+
+:root {
+  --primary: #7b169f; /* Color violeta principal de IMAstyle */
+  --primary-dark: #5c0d78; /* Violeta más oscuro para hover y detalles */
+  --primary-light: #f4e9f8; /* Violeta muy claro para fondos suaves */
+
+  --dark: #1d1d1f; /* Color oscuro principal del encabezado */
+  --dark-soft: #2b2b2e; /* Gris oscuro secundario */
+
+  --background: #f4f4f4; /* Fondo general de la página */
+  --surface: #ffffff; /* Fondo blanco de tarjetas y secciones */
+
+  --text: #222222; /* Color principal del texto */
+  --text-soft: #666666; /* Color de textos secundarios */
+
+  --border: #dedede; /* Color de los bordes */
+  --success: #16833f; /* Verde para estados disponibles */
+  --danger: #c62828; /* Rojo para botones de eliminar y errores */
+
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.14); /* Sombra al pasar el mouse */
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #9205a8;  /*cambie este color de fondo*/
-  color: #222222;
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+   Aplica reglas básicas a todos los elementos.
+   ===================================================== */
+
+* {
+  box-sizing: border-box; /* Incluye padding y borde dentro del tamaño total */
 }
+
+
+/* Permite un desplazamiento suave al navegar por la página */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Configuración visual general del cuerpo de la página */
+body {
+  margin: 0; /* Elimina el margen automático del navegador */
+  min-height: 100vh; /* Hace que el body ocupe como mínimo toda la pantalla */
+  font-family: Arial, Helvetica, sans-serif; /* Tipografía principal */
+  background: var(--background); /* Aplica el fondo gris claro */
+  color: var(--text); /* Aplica el color principal del texto */
+  line-height: 1.5; /* Mejora la separación entre líneas */
+}
+
+
+/* Hace que los enlaces hereden el color de su contenedor */
+a {
+  color: inherit;
+}
+
+
+/* =====================================================
+   ENCABEZADO PRINCIPAL
+   Contiene el logo y el menú de navegación.
+   ===================================================== */
 
 .main-header {
-  background: #222;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  display: flex; /* Coloca el logo y el menú en la misma línea */
+  justify-content: space-between; /* Separa el logo del menú */
+  align-items: center; /* Centra verticalmente ambos elementos */
+  gap: 24px; /* Deja espacio entre el logo y la navegación */
+  padding: 14px 5%; /* Agrega espacio interno al encabezado */
+  background: var(--dark); /* Mantiene el fondo negro */
+  color: white; /* Mantiene los textos claros */
+  border-bottom: 5px solid var(--primary); /* Agrega la línea violeta */
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2); /* Agrega sombra inferior */
 }
 
-.main-header h1 {
-  margin: 0 0 12px;
+
+/* Enlace que contiene el logo del encabezado */
+.header-logo-link {
+  display: inline-flex; /* Evita espacios innecesarios alrededor de la imagen */
+  align-items: center; /* Centra verticalmente el logo */
+  flex-shrink: 0; /* Evita que el logo se comprima */
+  text-decoration: none; /* Elimina cualquier subrayado */
 }
 
+
+/* Imagen del logo ubicada en el encabezado */
+.header-logo {
+  display: block; /* Elimina el espacio inferior propio de las imágenes */
+  width: clamp(190px, 23vw, 320px); /* Hace que el tamaño sea responsive */
+  height: 90px; /* Mantiene una altura controlada */
+  object-fit: contain; /* Evita que la imagen se deforme */
+}
+
+
+/* Organiza los enlaces del menú */
 .main-header nav {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  display: flex; /* Coloca los enlaces uno al lado del otro */
+  justify-content: flex-end; /* Alinea el menú hacia la derecha */
+  align-items: center; /* Centra verticalmente los enlaces */
+  gap: 10px; /* Deja separación entre los enlaces */
+  flex-wrap: wrap; /* Permite que bajen de línea en pantallas pequeñas */
 }
 
-.main-header a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+
+/* Estilo individual de los enlaces del menú */
+.main-header nav a {
+  display: inline-flex; /* Permite centrar el texto correctamente */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  min-height: 40px; /* Mantiene una altura uniforme */
+  padding: 9px 15px; /* Agrega espacio interno */
+  border-radius: 7px; /* Redondea los bordes */
+  color: white; /* Mantiene el texto blanco */
+  text-decoration: none; /* Elimina el subrayado */
+  font-size: 14px; /* Define el tamaño del texto */
+  font-weight: 700; /* Aplica negrita */
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease; /* Suaviza los efectos visuales */
 }
 
-.main-header a:hover {
-  text-decoration: underline;
+
+/* Efecto visual al pasar el mouse */
+.main-header nav a:hover {
+  background: var(--primary); /* Cambia el fondo a violeta */
+  transform: translateY(-1px); /* Eleva levemente el enlace */
 }
+
+
+/* =====================================================
+   LOGO DEL FOOTER
+   ===================================================== */
+
+/* Enlace que contiene el logo del footer */
+.footer-logo-link {
+  display: inline-flex; /* Ajusta el enlace al tamaño del logo */
+  align-items: center; /* Centra verticalmente la imagen */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+
+/* Logo ubicado en el footer */
+.footer-logo {
+  display: block; /* Elimina espacios innecesarios debajo de la imagen */
+  width: min(100%, 270px); /* Evita que supere el ancho de su columna */
+  height: 120px; /* Mantiene una altura uniforme */
+  object-fit: contain; /* Evita que el logo se deforme */
+}
+
+
+/* Organiza los enlaces de redes sociales */
+.footer-socials {
+  display: flex; /* Permite ordenar los enlaces con flexbox */
+  flex-direction: column; /* Coloca cada red social en una línea */
+  gap: 7px; /* Agrega separación entre enlaces */
+}
+
+
+/* Estilo de los enlaces del footer */
+.site-footer a {
+  color: inherit; /* Utiliza el color definido en el footer */
+  text-decoration: none; /* Elimina el subrayado */
+  transition: color 0.2s ease; /* Suaviza el cambio de color */
+}
+
+
+/* Efecto al pasar el mouse por los enlaces del footer */
+.site-footer a:hover {
+  color: var(--primary); /* Cambia el enlace a violeta */
+}
+
+
+/* =====================================================
+   DISEÑO RESPONSIVE DEL ENCABEZADO
+   ===================================================== */
+
+@media (max-width: 850px) {
+  .main-header {
+    flex-direction: column; /* Coloca el logo arriba y el menú debajo */
+    justify-content: center; /* Centra todo el encabezado */
+    text-align: center; /* Centra el contenido */
+  }
+
+  .main-header nav {
+    justify-content: center; /* Centra los enlaces del menú */
+  }
+
+  .header-logo {
+    width: min(85vw, 300px); /* Reduce el logo en tablets y celulares */
+    height: 80px; /* Reduce su altura */
+  }
+}
+
+
+@media (max-width: 520px) {
+  .main-header nav {
+    width: 100%; /* El menú ocupa todo el ancho disponible */
+    flex-direction: column; /* Coloca los enlaces uno debajo del otro */
+  }
+
+  .main-header nav a {
+    width: 100%; /* Cada enlace ocupa todo el ancho */
+  }
+
+  .header-logo {
+    width: min(90vw, 260px); /* Ajusta el logo a celulares pequeños */
+    height: 70px; /* Reduce nuevamente su altura */
+  }
+
+  .footer-logo {
+    width: min(100%, 230px); /* Reduce el logo del footer */
+    height: 100px; /* Reduce su altura */
+  }
+}
+
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+   Limita el ancho del contenido y lo centra.
+   ===================================================== */
 
 .container {
-  width: min(1100px, 92%);
-  margin: 30px auto;
+  width: min(1200px, 92%); /* Máximo 1200px o 92% de la pantalla */
+  margin: 32px auto 60px; /* Centra y agrega espacio superior e inferior */
 }
 
-.hero,
-.form-section {
-  background: white;
-  padding: 24px;
-  border-radius: 12px;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+/* =====================================================
+   HERO
+   Encabezado visual de cada sección.
+   ===================================================== */
+
+.hero {
+  position: relative; /* Permite posicionar elementos decorativos */
+  overflow: hidden; /* Oculta lo que sobresalga */
+  margin-bottom: 26px; /* Espacio debajo */
+  padding: 32px; /* Espaciado interno */
+  border-radius: 14px; /* Bordes redondeados */
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--dark) 0%,
+      var(--dark-soft) 62%,
+      var(--primary-dark) 100%
+    ); /* Fondo degradado oscuro y violeta */
+
+  color: white; /* Texto blanco */
+  box-shadow: var(--shadow); /* Sombra suave */
 }
+
+
+/* Título principal del hero */
+.hero h2 {
+  position: relative; /* Lo mantiene sobre el círculo decorativo */
+  z-index: 1; /* Lo coloca por delante */
+  margin: 0 0 10px; /* Espacio inferior */
+  font-size: clamp(25px, 4vw, 36px); /* Tamaño adaptable */
+}
+
+
+/* Texto descriptivo del hero */
+.hero p {
+  position: relative; /* Lo mantiene sobre la decoración */
+  z-index: 1; /* Lo coloca por delante */
+  max-width: 780px; /* Limita el ancho del texto */
+  margin: 0; /* Elimina márgenes automáticos */
+  color: #eeeeee; /* Gris muy claro */
+}
+
+
+/* =====================================================
+   FORMULARIOS Y FILTROS
+   Contiene el formulario de filtros y creación de productos.
+   ===================================================== */
+
+.form-section,
+.filters-section {
+  margin-bottom: 26px; /* Espacio debajo de la sección */
+  padding: 24px; /* Espaciado interno */
+  border: 1px solid var(--border); /* Borde gris claro */
+  border-radius: 14px; /* Bordes redondeados */
+  background: var(--surface); /* Fondo blanco */
+  box-shadow: var(--shadow); /* Sombra suave */
+}
+
+
+/* Organiza los campos del formulario de filtros */
+.filters-form {
+  display: grid; /* Usa una cuadrícula */
+  grid-template-columns:
+    minmax(210px, 2fr)
+    minmax(180px, 1fr)
+    minmax(160px, 1fr)
+    auto
+    auto; /* Define el ancho de cada columna */
+
+  gap: 14px; /* Espacio entre campos */
+  align-items: end; /* Alinea los campos por la parte inferior */
+}
+
+
+/* Agrupa una etiqueta con su campo */
+.form-group {
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Coloca etiqueta y campo uno debajo del otro */
+  gap: 7px; /* Espacio entre etiqueta y campo */
+}
+
+
+/* Estilo de las etiquetas */
+.form-group label {
+  font-size: 14px; /* Tamaño del texto */
+  font-weight: 700; /* Negrita */
+  color: var(--text); /* Color principal */
+}
+
+
+/* Estilo de los campos input y select */
+.form-group input,
+.form-group select,
+.product-form input,
+.product-form select {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  min-height: 44px; /* Altura mínima */
+  padding: 11px 12px; /* Espaciado interno */
+  border: 1px solid var(--border); /* Borde gris */
+  border-radius: 8px; /* Bordes redondeados */
+  background: white; /* Fondo blanco */
+  color: var(--text); /* Color del texto */
+  font-size: 15px; /* Tamaño del texto */
+  outline: none; /* Elimina el borde azul automático */
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease; /* Suaviza el foco */
+}
+
+
+/* Efecto cuando el usuario hace clic en un campo */
+.form-group input:focus,
+.form-group select:focus,
+.product-form input:focus,
+.product-form select:focus {
+  border-color: var(--primary); /* Borde violeta */
+  box-shadow: 0 0 0 3px rgba(123, 22, 159, 0.14); /* Resplandor violeta */
+}
+
+
+/* Organiza el formulario de productos */
+.product-form {
+  display: grid; /* Usa cuadrícula */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas adaptables */
+  gap: 14px; /* Espacio entre campos */
+}
+
+
+/* =====================================================
+   BOTONES
+   Estilos compartidos por todos los botones.
+   ===================================================== */
+
+.primary-button,
+.secondary-button,
+.delete-button,
+.product-form button {
+  display: inline-flex; /* Permite centrar contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  min-height: 44px; /* Altura mínima */
+  padding: 11px 18px; /* Espaciado interno */
+  border: none; /* Elimina el borde predeterminado */
+  border-radius: 8px; /* Bordes redondeados */
+  text-decoration: none; /* Elimina subrayado de enlaces */
+  font-size: 14px; /* Tamaño del texto */
+  font-weight: 700; /* Texto en negrita */
+  cursor: pointer; /* Muestra la mano al pasar el mouse */
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease; /* Suaviza efectos */
+}
+
+
+/* Botón principal violeta */
+.primary-button,
+.product-form button {
+  background: var(--primary); /* Fondo violeta */
+  color: white; /* Texto blanco */
+}
+
+
+/* Efecto del botón principal */
+.primary-button:hover,
+.product-form button:hover {
+  background: var(--primary-dark); /* Violeta oscuro */
+  transform: translateY(-1px); /* Eleva ligeramente */
+  box-shadow: 0 5px 14px rgba(123, 22, 159, 0.25); /* Sombra violeta */
+}
+
+
+/* Botón secundario blanco con borde violeta */
+.secondary-button {
+  border: 1px solid var(--primary); /* Borde violeta */
+  background: white; /* Fondo blanco */
+  color: var(--primary); /* Texto violeta */
+}
+
+
+/* Efecto del botón secundario */
+.secondary-button:hover {
+  background: var(--primary-light); /* Fondo violeta claro */
+  transform: translateY(-1px); /* Eleva ligeramente */
+}
+
+
+/* Botón para eliminar */
+.delete-button {
+  width: 100%; /* Ocupa todo el ancho */
+  margin-top: 12px; /* Espacio superior */
+  background: var(--danger); /* Fondo rojo */
+  color: white; /* Texto blanco */
+}
+
+
+/* Efecto del botón eliminar */
+.delete-button:hover {
+  background: #a91f1f; /* Rojo más oscuro */
+  transform: translateY(-1px); /* Eleva ligeramente */
+}
+
+
+/* =====================================================
+   GRILLA DE PRODUCTOS
+   Organiza las tarjetas en columnas adaptables.
+   ===================================================== */
 
 .products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 18px;
+  display: grid; /* Usa cuadrícula */
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); /* Columnas adaptables */
+  gap: 20px; /* Espacio entre tarjetas */
 }
+
+
+/* =====================================================
+   TARJETA DE PRODUCTO
+   Estilo individual de cada producto.
+   ===================================================== */
 
 .product-card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Organiza el contenido verticalmente */
+  min-height: 100%; /* Hace que las tarjetas tengan altura uniforme */
+  padding: 22px; /* Espaciado interno */
+  border: 1px solid #e6e6e6; /* Borde gris claro */
+  border-radius: 14px; /* Bordes redondeados */
+  background: var(--surface); /* Fondo blanco */
+  box-shadow: var(--shadow); /* Sombra suave */
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease; /* Suaviza el efecto hover */
 }
 
+
+/* Efecto al pasar el mouse sobre una tarjeta */
+.product-card:hover {
+  transform: translateY(-4px); /* Eleva la tarjeta */
+  border-color: #d7b4e2; /* Cambia el borde a violeta claro */
+  box-shadow: var(--shadow-hover); /* Aumenta la sombra */
+}
+
+
+/* Nombre del producto */
 .product-card h3 {
-  margin-top: 0;
+  margin: 0 0 12px; /* Espacio inferior */
+  min-height: 48px; /* Mantiene títulos alineados */
+  font-size: 20px; /* Tamaño del nombre */
+  line-height: 1.25; /* Separación entre líneas */
 }
 
-.product-form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
+
+/* Textos dentro de la tarjeta */
+.product-card p {
+  margin: 6px 0; /* Espacio vertical */
+  color: var(--text-soft); /* Gris para información secundaria */
 }
 
-.product-form input,
-.product-form select,
-.product-form button {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 15px;
+
+/* Textos destacados dentro de la tarjeta */
+.product-card strong {
+  color: var(--text); /* Color oscuro */
 }
 
-.product-form button,
-.delete-button {
-  border: none;
-  background: #222222;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
+
+/* Destaca visualmente el precio */
+.product-card p:nth-of-type(3) {
+  color: var(--primary-dark); /* Precio violeta oscuro */
+  font-size: 19px; /* Aumenta el tamaño */
+  font-weight: 700; /* Negrita */
 }
 
-.product-form button:hover,
-.delete-button:hover {
-  opacity: 0.85;
+
+/* Hace que el botón quede al pie de la tarjeta */
+.product-card .primary-button {
+  width: 100%; /* Ocupa todo el ancho */
+  margin-top: auto; /* Lo empuja hacia la parte inferior */
+  padding-top: 12px; /* Espaciado superior */
+  padding-bottom: 12px; /* Espaciado inferior */
 }
 
-.delete-button {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  margin-top: 10px;
+
+/* Espacio debajo del último texto de la tarjeta */
+.product-card p:last-of-type {
+  margin-bottom: 18px;
 }
 
+
+/* Marca el estado disponible en verde */
+.product-card p:last-of-type strong {
+  color: var(--success);
+}
+
+
+/* =====================================================
+   DETALLE DEL PRODUCTO
+   Tarjeta usada en la vista productDetail.
+   ===================================================== */
+
+.product-detail-card {
+  max-width: 850px; /* Limita el ancho */
+  margin: 0 auto; /* Centra la tarjeta */
+  padding: 30px; /* Espaciado interno */
+  border: 1px solid var(--border); /* Borde gris */
+  border-radius: 14px; /* Bordes redondeados */
+  background: var(--surface); /* Fondo blanco */
+  box-shadow: var(--shadow); /* Sombra suave */
+}
+
+
+/* Información individual del producto */
+.product-detail-card p {
+  margin: 13px 0; /* Separación vertical */
+  padding-bottom: 10px; /* Espacio inferior */
+  border-bottom: 1px solid #eeeeee; /* Línea separadora */
+  font-size: 16px; /* Tamaño de texto */
+}
+
+
+/* Elimina la línea del último dato */
+.product-detail-card p:last-of-type {
+  border-bottom: none;
+}
+
+
+/* Contenedor de los botones del detalle */
+.buttons {
+  display: flex; /* Coloca botones en línea */
+  gap: 12px; /* Espacio entre botones */
+  margin-top: 26px; /* Espacio superior */
+  flex-wrap: wrap; /* Permite que bajen en pantallas pequeñas */
+}
+
+
+/* =====================================================
+   PAGINACIÓN
+   Contiene los botones anterior, siguiente y el número
+   de página actual.
+   ===================================================== */
+
+.pagination {
+  display: flex; /* Coloca los elementos en línea */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 14px; /* Espacio entre elementos */
+  margin-top: 30px; /* Separación con las tarjetas */
+  padding: 18px; /* Espaciado interno */
+  border-radius: 12px; /* Bordes redondeados */
+  background: white; /* Fondo blanco */
+  box-shadow: var(--shadow); /* Sombra suave */
+  flex-wrap: wrap; /* Permite bajar elementos si falta espacio */
+}
+
+
+/* Indicador de página actual */
+.page-indicator {
+  padding: 10px 14px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  background: var(--primary-light); /* Fondo violeta claro */
+  color: var(--primary-dark); /* Texto violeta oscuro */
+  font-weight: 700; /* Texto en negrita */
+}
+
+
+/* =====================================================
+   MENSAJES
+   Estilos para errores y listas vacías.
+   ===================================================== */
+
+/* Mensaje de error */
 .error-message {
-  color: #b00020;
-  font-weight: bold;
+  padding: 14px; /* Espaciado interno */
+  border-left: 5px solid var(--danger); /* Línea roja lateral */
+  border-radius: 8px; /* Bordes redondeados */
+  background: #fff0f0; /* Fondo rojo muy claro */
+  color: var(--danger); /* Texto rojo */
+  font-weight: 700; /* Texto en negrita */
 }
 
+
+/* Mensaje cuando no hay productos */
 .empty-message {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
+  grid-column: 1 / -1; /* Ocupa todo el ancho de la grilla */
+  padding: 28px; /* Espaciado interno */
+  border: 1px dashed #c9c9c9; /* Borde punteado */
+  border-radius: 12px; /* Bordes redondeados */
+  background: white; /* Fondo blanco */
+  color: var(--text-soft); /* Texto gris */
+  text-align: center; /* Centra el mensaje */
+  box-shadow: var(--shadow); /* Sombra suave */
+}
+
+
+/* =====================================================
+   RESPONSIVE PARA TABLETS
+   Ajusta formularios en pantallas medianas.
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+  /* Divide los filtros en dos columnas */
+  .filters-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Hace que los botones ocupen todo el ancho disponible */
+  .filters-form .primary-button,
+  .filters-form .secondary-button {
+    width: 100%;
+  }
+}
+
+  .categories-grid {
+    grid-template-columns: 1fr; /* Muestra una categoría por fila */
+  }
+
+/* =====================================================
+   RESPONSIVE PARA CELULARES
+   Ajusta toda la página en pantallas pequeñas.
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+  /* Reduce el espacio del encabezado */
+  .main-header {
+    padding: 18px 14px;
+  }
+
+  /* Coloca los enlaces del menú uno debajo del otro */
+  .main-header nav {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  /* Hace que los enlaces ocupen todo el ancho */
+  .main-header nav a {
+    width: 100%;
+  }
+
+  /* Ajusta el ancho del contenido principal */
+  .container {
+    width: min(94%, 1200px);
+    margin-top: 20px;
+  }
+
+  /* Reduce el padding de las cajas principales */
+  .hero,
+  .form-section,
+  .filters-section,
+  .product-detail-card {
+    padding: 20px;
+    border-radius: 11px;
+  }
+
+  /* Coloca los filtros en una sola columna */
+  .filters-form {
+    grid-template-columns: 1fr;
+  }
+
+  /* Muestra una tarjeta por fila */
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Coloca los botones uno debajo del otro */
+  .buttons {
+    flex-direction: column;
+  }
+
+  /* Botones de detalle ocupan todo el ancho */
+  .buttons .primary-button,
+  .buttons .secondary-button {
+    width: 100%;
+  }
+
+  /* Organiza la paginación verticalmente */
+  .pagination {
+    flex-direction: column;
+  }
+
+  /* Botones de paginación ocupan todo el ancho */
+  .pagination .secondary-button {
+    width: 100%;
+  }
+}
+
+  .section-heading {
+    flex-direction: column; /* Coloca título y botón uno debajo del otro */
+    align-items: stretch; /* Hace que ocupen el ancho disponible */
+  }
+
+  .section-heading .secondary-button {
+    width: 100%; /* Botón de catálogo ocupa todo el ancho */
+  }
+
+/* =====================================================
+   CATEGORÍAS DE LA PORTADA
+   Organiza las categorías principales de IMAstyle.
+   ===================================================== */
+
+.categories-section {
+  margin-bottom: 34px; /* Separa las categorías de la siguiente sección */
+}
+
+.categories-section h2 {
+  margin-bottom: 18px; /* Espacio debajo del título */
+}
+
+.categories-grid {
+  display: grid; /* Organiza las tarjetas en una cuadrícula */
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Crea tres columnas iguales */
+  gap: 20px; /* Espacio entre tarjetas */
+}
+
+.category-card {
+  display: flex; /* Organiza el contenido internamente */
+  flex-direction: column; /* Coloca el contenido en vertical */
+  min-height: 245px; /* Mantiene las tarjetas con altura similar */
+  padding: 26px; /* Espacio interno */
+  border-radius: 14px; /* Bordes redondeados */
+  background: white; /* Fondo blanco */
+  border: 1px solid var(--border); /* Borde gris claro */
+  box-shadow: var(--shadow); /* Sombra suave */
+}
+
+.category-card h3 {
+  margin: 0 0 12px; /* Separa el título del texto */
+  font-size: 23px; /* Aumenta el tamaño del título */
+}
+
+.category-card p {
+  margin: 0 0 24px; /* Separa el texto del botón */
+  color: var(--text-soft); /* Usa un gris suave */
+}
+
+.category-card .primary-button {
+  width: 100%; /* El botón ocupa todo el ancho */
+  margin-top: auto; /* Empuja el botón hacia abajo */
+}
+
+
+/* =====================================================
+   PRODUCTOS DESTACADOS
+   Encabezado de la sección de productos.
+   ===================================================== */
+
+.featured-section {
+  margin-top: 34px; /* Separa la sección de categorías */
+}
+
+.section-heading {
+  display: flex; /* Coloca el título y el botón en línea */
+  justify-content: space-between; /* Los ubica en extremos opuestos */
+  align-items: end; /* Alinea por la parte inferior */
+  gap: 20px; /* Espacio entre elementos */
+  margin-bottom: 20px; /* Espacio antes de los productos */
+}
+
+.section-heading h2 {
+  margin: 0 0 6px; /* Ajusta el espacio del título */
+}
+
+.section-heading p {
+  margin: 0; /* Elimina margen automático */
+  color: var(--text-soft); /* Texto secundario en gris */
+}
+
+
+/* =====================================================
+   FOOTER PRINCIPAL
+   Define el fondo negro y el aspecto general.
+   ===================================================== */
+
+.site-footer {
+  margin-top: 48px; /* Separa el footer del contenido principal */
+  background: #111111; /* Aplica fondo negro */
+  color: #ffffff; /* Define texto blanco */
+}
+
+
+/* =====================================================
+   CONTENEDOR DEL FOOTER
+   Organiza las columnas principales.
+   ===================================================== */
+
+.footer-container {
+  width: min(1200px, calc(100% - 40px)); /* Limita el ancho y deja margen lateral */
+  margin: 0 auto; /* Centra el contenido */
+  display: grid; /* Activa una cuadrícula */
+  grid-template-columns: 1.2fr repeat(4, 1fr); /* Crea cinco columnas */
+  gap: 28px; /* Agrega espacio entre columnas */
+  padding: 38px 0 30px; /* Agrega espacio interno arriba y abajo */
+}
+
+
+/* =====================================================
+   COLUMNAS DEL FOOTER
+   Da formato a cada bloque de información.
+   ===================================================== */
+
+.footer-column h2,
+.footer-column h3 {
+  margin: 0 0 12px; /* Separa los títulos del contenido */
+  color: #ffffff; /* Mantiene los títulos en blanco */
+}
+
+.footer-column h2 {
+  font-size: 26px; /* Aumenta el tamaño del nombre IMAstyle */
+}
+
+.footer-column h3 {
+  font-size: 16px; /* Define tamaño de títulos secundarios */
+}
+
+.footer-column p {
+  margin: 0 0 7px; /* Separa cada línea de texto */
+  color: #d6d6d6; /* Usa gris claro para el texto secundario */
+  line-height: 1.5; /* Mejora la lectura */
+}
+
+.footer-column a {
+  color: #d6d6d6; /* Mantiene los enlaces en gris claro */
+  text-decoration: none; /* Quita el subrayado */
+}
+
+.footer-column a:hover {
+  color: #a855f7; /* Cambia el enlace a violeta al pasar el mouse */
+}
+
+
+/* =====================================================
+   MARCA IMASTYLE
+   Da mayor presencia a la primera columna.
+   ===================================================== */
+
+.footer-brand p {
+  max-width: 180px; /* Limita el ancho del eslogan */
+}
+
+
+/* =====================================================
+   REDES SOCIALES DEL FOOTER
+   ===================================================== */
+
+/* Organiza los íconos en una misma fila */
+.footer-socials {
+  display: flex; /* Coloca los íconos uno al lado del otro */
+  flex-direction: row; /* Asegura que estén en línea horizontal */
+  align-items: center; /* Centra verticalmente los íconos */
+  gap: 14px; /* Agrega separación entre cada red social */
+  margin-top: 12px; /* Separa los íconos del título */
+}
+
+
+/* Estilo del enlace circular que contiene cada ícono */
+.social-link {
+  display: inline-flex; /* Permite centrar correctamente el SVG */
+  align-items: center; /* Centra verticalmente el ícono */
+  justify-content: center; /* Centra horizontalmente el ícono */
+  width: 42px; /* Define el ancho del botón */
+  height: 42px; /* Define el alto del botón */
+  border: 1px solid rgba(255, 255, 255, 0.374); /* Agrega un borde suave */
+  border-radius: 50%; /* Convierte el enlace en un círculo */
+  color: white; /* Define el color inicial del ícono */
+  background-color: rgba(255, 255, 255, 0.06); /* Agrega un fondo sutil  rgba(255, 255, 255, 0.06) */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease; /* Suaviza los efectos visuales */
+}
+
+
+/* Define el tamaño de los SVG */
+.social-icon {
+  width: 22px; /* Controla el ancho del ícono */
+  height: 22px; /* Controla el alto del ícono */
+  fill: currentColor; /* Usa el color definido en el enlace */
+}
+
+
+/* Efecto visual al pasar el mouse */
+.social-link:hover {
+  color: white; /* Mantiene el ícono blanco */
+  background-color: var(--primary); /* Aplica el violeta de IMAtecno */
+  border-color: var(--primary); /* Cambia también el borde */
+  transform: translateY(-3px); /* Eleva ligeramente el botón */
+}
+
+
+/* Mejora la accesibilidad al navegar con teclado */
+.social-link:focus-visible {
+  outline: 3px solid rgba(175, 63, 220, 0.45); /* Marca claramente el enlace seleccionado */
+  outline-offset: 3px; /* Separa el contorno del botón */
+}
+
+/* =====================================================
+   PARTE INFERIOR DEL FOOTER
+   Muestra los derechos reservados.
+   ===================================================== */
+
+.footer-bottom {
+  border-top: 1px solid #bdb9b96f; /* Separa visualmente del bloque superior  #2b2b2b */
+  padding: 16px 20px; /* Agrega espacio interno */
+  text-align: center; /* Centra el texto */
+}
+
+.footer-bottom p {
+  margin: 0; /* Elimina margen automático */
+  color: #f8f2f2; /* Aplica gris suave */
+  font-size: 14px; /* Reduce el tamaño del texto */
+}
+
+
+/* =====================================================
+   LÍNEA VIOLETA INFERIOR
+   Agrega el detalle visual pedido.
+   ===================================================== */
+
+.footer-violet-line {
+  height: 5px; /* Define el grosor de la línea */
+  background: #7b169f; /* Aplica el color violeta */
+}
+
+
+/* =====================================================
+   FOOTER RESPONSIVE
+   Adapta las columnas a pantallas medianas.
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr); /* Muestra dos columnas por fila */
+  }
+
+}
+
+
+/* =====================================================
+   FOOTER RESPONSIVE PARA CELULAR
+   Muestra una sola columna.
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .footer-container {
+    grid-template-columns: 1fr; /* Muestra una columna */
+    padding: 30px 0 24px; /* Ajusta el espacio interno */
+  }
+
+  .footer-column {
+    text-align: center; /* Centra el contenido */
+  }
+
+  .footer-brand p {
+    max-width: none; /* Permite que el eslogan ocupe todo el ancho */
+  }
+
+  .footer-socials {
+    justify-content: center; /* Centra las redes sociales */
+  }
+
 }

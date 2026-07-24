@@ -1,0 +1,542 @@
+[
+  {
+    "title": "Teclado Gamer",
+    "description": "Teclado mecánico con iluminación RGB, diseño resistente y respuesta rápida para juegos, estudio y trabajo.",
+    "code": "TEC001",
+    "price": 35000,
+    "status": true,
+    "stock": 15,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/teclado-gamer.webp"
+    ]
+  },
+  {
+    "title": "Mouse Gamer Logitech G203",
+    "description": "Mouse óptico RGB de hasta 8000 DPI, con diseño cómodo y precisión ajustable para juegos y tareas cotidianas.",
+    "code": "LOG-G203",
+    "price": 35000,
+    "status": true,
+    "stock": 15,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/mouse-gamer-logitech-g203.webp"
+    ]
+  },
+  {
+    "title": "Proyector Gadnic Full HD WiFi 5G Android",
+    "description": "Proyector portátil con sistema Android, conexión WiFi y resolución Full HD, pensado para películas, presentaciones y entretenimiento en el hogar.",
+    "code": "TEC-PROY-001",
+    "price": 289900,
+    "status": true,
+    "stock": 12,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/proyector-gadnic-full-hd-wifi-5g-android.webp"
+    ]
+  },
+  {
+    "title": "Tablet Gadnic 10 Pulgadas Android 128GB",
+    "description": "Tablet de pantalla amplia con almacenamiento de 128 GB y sistema Android, ideal para estudiar, navegar, mirar contenido y utilizar aplicaciones.",
+    "code": "TEC-TAB-002",
+    "price": 259900,
+    "status": true,
+    "stock": 18,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/tablet-gadnic-10-pulgadas-android-128gb.webp"
+    ]
+  },
+  {
+    "title": "Notebook Gadnic 14 Pulgadas Intel 128GB",
+    "description": "Notebook liviana de 14 pulgadas preparada para tareas cotidianas, clases virtuales, navegación web y trabajo de oficina.",
+    "code": "TEC-NOTE-003",
+    "price": 489900,
+    "status": true,
+    "stock": 9,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/notebook-gadnic-14-pulgadas-intel-128gb.webp"
+    ]
+  },
+  {
+    "title": "Monitor Gamer Gadnic 24 Pulgadas Full HD",
+    "description": "Monitor Full HD de 24 pulgadas con imagen fluida y diseño moderno, recomendado para gaming, estudio y trabajo remoto.",
+    "code": "TEC-MON-004",
+    "price": 229900,
+    "status": true,
+    "stock": 14,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/monitor-gamer-gadnic-24-pulgadas-full-hd.webp"
+    ]
+  },
+  {
+    "title": "Auriculares Gamer Gadnic RGB con Micrófono",
+    "description": "Auriculares envolventes con iluminación RGB, micrófono ajustable y vincha acolchada para jugar o comunicarse con comodidad.",
+    "code": "TEC-AUR-005",
+    "price": 45900,
+    "status": true,
+    "stock": 28,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/auriculares-gamer-gadnic-rgb-con-microfono.webp"
+    ]
+  },
+  {
+    "title": "Parlante Bluetooth Gadnic Portátil",
+    "description": "Parlante inalámbrico compacto con sonido potente, batería recargable y conexión Bluetooth para utilizar dentro o fuera del hogar.",
+    "code": "TEC-PAR-006",
+    "price": 69900,
+    "status": true,
+    "stock": 22,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/parlante-bluetooth-gadnic-portatil.webp"
+    ]
+  },
+  {
+    "title": "Smartwatch Gadnic Active Pro",
+    "description": "Reloj inteligente con seguimiento de actividad, notificaciones, medición deportiva y pantalla táctil de fácil lectura.",
+    "code": "TEC-SMW-007",
+    "price": 84900,
+    "status": true,
+    "stock": 20,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/smartwatch-gadnic-active-pro.webp"
+    ]
+  },
+  {
+    "title": "Consola Retro Gadnic Portátil",
+    "description": "Consola portátil con pantalla integrada y juegos clásicos, diseñada para disfrutar entretenimiento retro en cualquier lugar.",
+    "code": "TEC-CON-008",
+    "price": 74900,
+    "status": true,
+    "stock": 17,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/consola-retro-gadnic-portatil.webp"
+    ]
+  },
+  {
+    "title": "Impresora Térmica Gadnic Bluetooth",
+    "description": "Impresora térmica compacta con conexión Bluetooth, útil para etiquetas, comprobantes y organización de pequeños emprendimientos.",
+    "code": "TEC-IMP-009",
+    "price": 119900,
+    "status": true,
+    "stock": 11,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/impresora-termica-gadnic-bluetooth.webp"
+    ]
+  },
+  {
+    "title": "Router Gadnic WiFi Dual Band",
+    "description": "Router de doble banda diseñado para mejorar la cobertura inalámbrica y conectar varios dispositivos de manera estable.",
+    "code": "TEC-ROU-010",
+    "price": 79900,
+    "status": true,
+    "stock": 16,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/router-gadnic-wifi-dual-band.webp"
+    ]
+  },
+  {
+    "title": "Micrófono Profesional Gadnic USB",
+    "description": "Micrófono USB con soporte de escritorio y captación clara de voz para streaming, reuniones, clases y creación de contenido.",
+    "code": "TEC-MIC-011",
+    "price": 89900,
+    "status": true,
+    "stock": 13,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/microfono-profesional-gadnic-usb.webp"
+    ]
+  },
+  {
+    "title": "Aro de Luz Gadnic LED con Trípode",
+    "description": "Aro de luz regulable con trípode extensible y soporte para celular, ideal para fotografía, maquillaje y transmisiones.",
+    "code": "TEC-ARO-012",
+    "price": 54900,
+    "status": true,
+    "stock": 24,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/aro-de-luz-gadnic-led-con-tripode.webp"
+    ]
+  },
+  {
+    "title": "Cámara Deportiva Gadnic 4K WiFi",
+    "description": "Cámara de acción compacta con grabación 4K, conexión WiFi y accesorios para registrar viajes, deportes y actividades al aire libre.",
+    "code": "TEC-CAM-013",
+    "price": 139900,
+    "status": true,
+    "stock": 10,
+    "category": "Tecnología",
+    "thumbnails": [
+      "/images/productos/camara-deportiva-gadnic-4k-wifi.webp"
+    ]
+  },
+  {
+    "title": "Aspiradora Robot Gadnic 3 Modos Automática Control Remoto App Mopa",
+    "description": "Robot aspirador con tres modos de limpieza, control desde aplicación y función de mopa para mantener los ambientes limpios con menor esfuerzo.",
+    "code": "HOG-ASP-001",
+    "price": 239900,
+    "status": true,
+    "stock": 12,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/aspiradora-robot-gadnic-3-modos-automatica-control-remoto-app-mopa.webp"
+    ]
+  },
+  {
+    "title": "Aspiradora Trapeadora Robot Gadnic AC701 con Base de Carga",
+    "description": "Aspiradora robot con navegación inteligente, función de trapeado y retorno automático a la base para una limpieza organizada.",
+    "code": "HOG-ASP-002",
+    "price": 419900,
+    "status": true,
+    "stock": 7,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/aspiradora-trapeadora-robot-gadnic-ac701-con-base-de-carga.webp"
+    ]
+  },
+  {
+    "title": "Aspiradora Robot Gadnic Z1000 Trapeadora 3 Modos",
+    "description": "Equipo autónomo para aspirar y trapear con diferentes modos de trabajo, sensores de obstáculos y programación desde el celular.",
+    "code": "HOG-ASP-003",
+    "price": 359900,
+    "status": true,
+    "stock": 8,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/aspiradora-robot-gadnic-z1000-trapeadora-3-modos.webp"
+    ]
+  },
+  {
+    "title": "Freidora de Aire Gadnic Pantalla Táctil 4.2L Sin Aceite",
+    "description": "Freidora de aire compacta con panel táctil y cocción con poco aceite, adecuada para preparar comidas rápidas y prácticas.",
+    "code": "HOG-FRE-004",
+    "price": 109900,
+    "status": true,
+    "stock": 19,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/freidora-de-aire-gadnic-pantalla-tactil-4-2l-sin-aceite.webp"
+    ]
+  },
+  {
+    "title": "Freidora de Aire Gadnic Future V72 7.2 Litros",
+    "description": "Freidora de gran capacidad con visor frontal y controles digitales para cocinar porciones familiares de forma uniforme.",
+    "code": "HOG-FRE-005",
+    "price": 149900,
+    "status": true,
+    "stock": 15,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/freidora-de-aire-gadnic-future-v72-7-2-litros.webp"
+    ]
+  },
+  {
+    "title": "Cafetera Express Gadnic Barista",
+    "description": "Cafetera express con vaporizador y bandeja desmontable para preparar café, capuchino y bebidas con leche en casa.",
+    "code": "HOG-CAF-006",
+    "price": 189900,
+    "status": true,
+    "stock": 10,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/cafetera-express-gadnic-barista.webp"
+    ]
+  },
+  {
+    "title": "Cafetera de Filtro Gadnic Eléctrica 12 Tazas",
+    "description": "Cafetera programable con jarra de gran capacidad y placa térmica para mantener el café listo durante más tiempo.",
+    "code": "HOG-CAF-007",
+    "price": 89900,
+    "status": true,
+    "stock": 14,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/cafetera-de-filtro-gadnic-electrica-12-tazas.webp"
+    ]
+  },
+  {
+    "title": "Horno Eléctrico Gadnic 45 Litros",
+    "description": "Horno eléctrico de amplia capacidad con selector de temperatura y diferentes funciones para cocinar, gratinar y calentar.",
+    "code": "HOG-HOR-008",
+    "price": 219900,
+    "status": true,
+    "stock": 9,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/horno-electrico-gadnic-45-litros.webp"
+    ]
+  },
+  {
+    "title": "Licuadora Gadnic 1.5 Litros",
+    "description": "Licuadora con jarra resistente y varias velocidades para preparar licuados, salsas y mezclas de uso diario.",
+    "code": "HOG-LIC-009",
+    "price": 79900,
+    "status": true,
+    "stock": 21,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/licuadora-gadnic-1-5-litros.webp"
+    ]
+  },
+  {
+    "title": "Batidora Planetaria Gadnic 5 Litros",
+    "description": "Batidora de pie con bowl de acero y accesorios intercambiables para amasar, batir y mezclar preparaciones caseras.",
+    "code": "HOG-BAT-010",
+    "price": 174900,
+    "status": true,
+    "stock": 11,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/batidora-planetaria-gadnic-5-litros.webp"
+    ]
+  },
+  {
+    "title": "Pava Eléctrica Gadnic Digital",
+    "description": "Pava eléctrica con control digital de temperatura y apagado automático para calentar agua de manera rápida y segura.",
+    "code": "HOG-PAV-011",
+    "price": 64900,
+    "status": true,
+    "stock": 25,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/pava-electrica-gadnic-digital.webp"
+    ]
+  },
+  {
+    "title": "Plancha a Vapor Gadnic",
+    "description": "Plancha con salida de vapor regulable y base deslizante para facilitar el cuidado cotidiano de diferentes tipos de prendas.",
+    "code": "HOG-PLA-012",
+    "price": 59900,
+    "status": true,
+    "stock": 18,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/plancha-a-vapor-gadnic.webp"
+    ]
+  },
+  {
+    "title": "Máquina de Coser Gadnic Portátil",
+    "description": "Máquina de coser compacta con puntadas seleccionables, luz incorporada y pedal para arreglos y proyectos domésticos.",
+    "code": "HOG-COS-013",
+    "price": 159900,
+    "status": true,
+    "stock": 8,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/maquina-de-coser-gadnic-portatil.webp"
+    ]
+  },
+  {
+    "title": "Lavavajillas Gadnic Compacto",
+    "description": "Lavavajillas de tamaño reducido con programas de lavado para departamentos, cocinas pequeñas y uso cotidiano.",
+    "code": "HOG-LAV-014",
+    "price": 399900,
+    "status": true,
+    "stock": 6,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/lavavajillas-gadnic-compacto.webp"
+    ]
+  },
+  {
+    "title": "Aspiradora de Mano Gadnic Inalámbrica",
+    "description": "Aspiradora liviana y recargable para limpiar muebles, rincones, vehículos y superficies pequeñas sin utilizar cables.",
+    "code": "HOG-ASP-015",
+    "price": 94900,
+    "status": true,
+    "stock": 16,
+    "category": "Electro y Hogar",
+    "thumbnails": [
+      "/images/productos/aspiradora-de-mano-gadnic-inalambrica.webp"
+    ]
+  },
+  {
+    "title": "Cámara de Seguridad Gadnic SX39 IP66 360 Visión Nocturna Full HD",
+    "description": "Cámara motorizada para interior o exterior con visión nocturna, detección de movimiento y acceso remoto desde el celular.",
+    "code": "SEG-CAM-001",
+    "price": 114900,
+    "status": true,
+    "stock": 20,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/camara-de-seguridad-gadnic-sx39-ip66-360-vision-nocturna-full-hd.webp"
+    ]
+  },
+  {
+    "title": "Cámara de Seguridad Gadnic SX19 WiFi Interior Full HD",
+    "description": "Cámara WiFi para interiores con transmisión en vivo, visión nocturna y alertas de movimiento mediante aplicación móvil.",
+    "code": "SEG-CAM-002",
+    "price": 89900,
+    "status": true,
+    "stock": 18,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/camara-de-seguridad-gadnic-sx19-wifi-interior-full-hd.webp"
+    ]
+  },
+  {
+    "title": "Cámara de Seguridad Gadnic SX37 Bullet Interior Exterior IP WiFi",
+    "description": "Cámara tipo bullet resistente para vigilancia de accesos, patios o comercios, con imagen Full HD y almacenamiento local.",
+    "code": "SEG-CAM-003",
+    "price": 129900,
+    "status": true,
+    "stock": 14,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/camara-de-seguridad-gadnic-sx37-bullet-interior-exterior-ip-wifi.webp"
+    ]
+  },
+  {
+    "title": "Cámara de Seguridad Interior Gadnic SX9-Pro WiFi 3MP",
+    "description": "Cámara compacta de alta definición con rotación, audio bidireccional y control remoto para supervisar espacios interiores.",
+    "code": "SEG-CAM-004",
+    "price": 104900,
+    "status": true,
+    "stock": 16,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/camara-de-seguridad-interior-gadnic-sx9-pro-wifi-3mp.webp"
+    ]
+  },
+  {
+    "title": "Kit x2 Cámaras de Seguridad Gadnic con Lente Dual",
+    "description": "Kit de dos cámaras con doble lente, visión nocturna y seguimiento desde aplicación para ampliar la cobertura del hogar.",
+    "code": "SEG-KIT-005",
+    "price": 249900,
+    "status": true,
+    "stock": 10,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/kit-x2-camaras-de-seguridad-gadnic-con-lente-dual.webp"
+    ]
+  },
+  {
+    "title": "Kit Cámaras de Seguridad Gadnic IP WiFi Exterior x2",
+    "description": "Conjunto de cámaras exteriores con conectividad WiFi y grabación Full HD para controlar entradas y perímetros.",
+    "code": "SEG-KIT-006",
+    "price": 219900,
+    "status": true,
+    "stock": 9,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/kit-camaras-de-seguridad-gadnic-ip-wifi-exterior-x2.webp"
+    ]
+  },
+  {
+    "title": "Cámaras de Seguridad WiFi IP Gadnic DM200W x3 Full HD",
+    "description": "Pack de tres cámaras motorizadas para supervisar varios ambientes desde una misma aplicación con imagen Full HD.",
+    "code": "SEG-KIT-007",
+    "price": 329900,
+    "status": true,
+    "stock": 7,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/camaras-de-seguridad-wifi-ip-gadnic-dm200w-x3-full-hd.webp"
+    ]
+  },
+  {
+    "title": "Cámara de Seguridad con Reflector Gadnic L-Cam Full HD 3MP",
+    "description": "Cámara exterior con reflector integrado, detección de movimiento y visión nocturna para iluminar y registrar zonas de acceso.",
+    "code": "SEG-CAM-008",
+    "price": 154900,
+    "status": true,
+    "stock": 12,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/camara-de-seguridad-con-reflector-gadnic-l-cam-full-hd-3mp.webp"
+    ]
+  },
+  {
+    "title": "Cámara de Seguridad Gadnic C25-1 Domo Visión Nocturna",
+    "description": "Cámara tipo domo con detección de movimiento y modos de visión nocturna para instalaciones interiores controladas.",
+    "code": "SEG-CAM-009",
+    "price": 74900,
+    "status": true,
+    "stock": 17,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/camara-de-seguridad-gadnic-c25-1-domo-vision-nocturna.webp"
+    ]
+  },
+  {
+    "title": "Cámara de Seguridad Gadnic WiFi 3MP Mini Interior",
+    "description": "Cámara mini para ventanas o ambientes interiores con audio bidireccional, alertas y almacenamiento mediante tarjeta.",
+    "code": "SEG-CAM-010",
+    "price": 94900,
+    "status": true,
+    "stock": 15,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/camara-de-seguridad-gadnic-wifi-3mp-mini-interior.webp"
+    ]
+  },
+  {
+    "title": "Caja Fuerte Digital Gadnic Huella Contraseña y Llave",
+    "description": "Caja fuerte de acero con apertura mediante huella, clave o llave y alarma integrada para proteger objetos importantes.",
+    "code": "SEG-CAJ-011",
+    "price": 229900,
+    "status": true,
+    "stock": 8,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/caja-fuerte-digital-gadnic-huella-contrasena-y-llave.webp"
+    ]
+  },
+  {
+    "title": "Alarma Inteligente Gadnic WiFi para Hogar",
+    "description": "Sistema de alarma con sensores y avisos al celular para detectar aperturas o movimientos en viviendas y pequeños comercios.",
+    "code": "SEG-ALA-012",
+    "price": 139900,
+    "status": true,
+    "stock": 11,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/alarma-inteligente-gadnic-wifi-para-hogar.webp"
+    ]
+  },
+  {
+    "title": "Video Portero Gadnic WiFi con Pantalla",
+    "description": "Portero eléctrico con cámara, pantalla interior y comunicación bidireccional para identificar visitas antes de abrir.",
+    "code": "SEG-POR-013",
+    "price": 199900,
+    "status": true,
+    "stock": 9,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/video-portero-gadnic-wifi-con-pantalla.webp"
+    ]
+  },
+  {
+    "title": "Baby Monitor Gadnic con Cámara y Visión Nocturna",
+    "description": "Monitor para bebés con cámara, audio bidireccional y visión nocturna para observar el ambiente desde otra habitación.",
+    "code": "SEG-BAB-014",
+    "price": 169900,
+    "status": true,
+    "stock": 13,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/baby-monitor-gadnic-con-camara-y-vision-nocturna.webp"
+    ]
+  },
+  {
+    "title": "Control de Acceso Biométrico Gadnic",
+    "description": "Equipo de control de ingreso mediante huella y código, adecuado para oficinas, depósitos y espacios de acceso restringido.",
+    "code": "SEG-ACC-015",
+    "price": 184900,
+    "status": true,
+    "stock": 10,
+    "category": "Seguridad y Vigilancia",
+    "thumbnails": [
+      "/images/productos/control-de-acceso-biometrico-gadnic.webp"
+    ]
+  }
+]

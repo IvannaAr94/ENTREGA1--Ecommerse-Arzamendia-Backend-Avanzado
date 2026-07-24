@@ -1,4 +1,11 @@
+# Dependencias instaladas localmente
 node_modules/
+
+# Archivos de log
 npm-debug.log
+
+# Variables privadas y datos de conexión.
 .env
+
+# Archivos del sistema operativo
 .DS_Store

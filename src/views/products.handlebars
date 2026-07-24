@@ -1,0 +1,155 @@
+<!-- =====================================================
+     VISTA: products.handlebars
+     Muestra los productos con paginación.
+     ===================================================== -->
+
+<section class="hero">
+  <h2>Productos de IMAtecno</h2>
+
+  <p>
+    Explorá el catálogo completo, consultá los detalles de cada producto y
+    navegá entre las páginas.
+  </p>
+</section>
+
+<!-- =====================================================
+     FILTROS Y ORDENAMIENTO
+     El formulario envía los valores por query params.
+     ===================================================== -->
+
+<section class="filters-section">
+  <form action="/products" method="GET" class="filters-form">
+
+    <div class="form-group">
+      <label for="query">Buscar productos</label>
+
+      <input
+        type="text"
+        id="query"
+        name="query"
+        placeholder="Ejemplo: Periféricos o available"
+        value="{{selectedQuery}}"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="sort">Ordenar por precio</label>
+
+      <select id="sort" name="sort">
+        <option value="">Sin ordenamiento</option>
+        <option value="asc">Menor a mayor</option>
+        <option value="desc">Mayor a menor</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="limit">Productos por página</label>
+
+      <select id="limit" name="limit">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+      </select>
+    </div>
+
+    <button type="submit" class="primary-button">
+      Aplicar filtros
+    </button>
+
+    <a href="/products" class="secondary-button">
+      Limpiar filtros
+    </a>
+
+  </form>
+</section>
+
+<!-- =====================================================
+     LISTADO DE PRODUCTOS
+     ===================================================== -->
+
+<section class="products-grid">
+
+  {{#if products.length}}
+
+    {{#each products}}
+
+      <article class="product-card">
+
+        <h3>{{this.title}}</h3>
+
+        <p>{{this.description}}</p>
+
+        <p>
+          <strong>Código:</strong>
+          {{this.code}}
+        </p>
+
+        <p>
+          <strong>Precio:</strong>
+          ${{this.price}}
+        </p>
+
+        <p>
+          <strong>Stock:</strong>
+          {{this.stock}}
+        </p>
+
+        <p>
+          <strong>Categoría:</strong>
+          {{this.category}}
+        </p>
+
+        <p>
+          <strong>Estado:</strong>
+
+          {{#if this.status}}
+            Disponible
+          {{else}}
+            No disponible
+          {{/if}}
+        </p>
+
+        <a href="/products/{{this._id}}" class="primary-button">
+          Ver detalle
+        </a>
+
+      </article>
+
+    {{/each}}
+
+  {{else}}
+
+    <p class="empty-message">
+      No se encontraron productos con los filtros seleccionados.
+    </p>
+
+  {{/if}}
+
+</section>
+
+<!-- =====================================================
+     PAGINACIÓN
+     ===================================================== -->
+
+<section class="pagination">
+
+  {{#if hasPrevPage}}
+    <a href="{{prevLink}}" class="secondary-button">
+      ← Página anterior
+    </a>
+  {{/if}}
+
+  <span class="page-indicator">
+    Página
+    {{page}}
+    de
+    {{totalPages}}
+  </span>
+
+  {{#if hasNextPage}}
+    <a href="{{nextLink}}" class="secondary-button">
+      Página siguiente →
+    </a>
+  {{/if}}
+
+</section>

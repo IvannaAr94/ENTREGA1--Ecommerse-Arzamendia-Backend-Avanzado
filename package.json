@@ -1,19 +1,33 @@
 {
   "name": "entrega2-arzamendia-ecommerce-backend-avanzado",
   "version": "2.0.0",
-  "description": "Entrega 2 Backend Avanzado: ecommerce con Express, Handlebars y WebSockets usando Socket.io.",
+  "description": "Entrega 2 Backend Avanzado: ecommerce con Express, Handlebars, MongoDB, paginación y WebSockets mediante Socket.io.",
   "main": "src/app.js",
   "type": "module",
   "scripts": {
     "start": "node src/app.js",
     "dev": "node --watch src/app.js"
   },
-  "keywords": ["node", "express", "ecommerce", "backend", "handlebars", "socket.io", "websockets"],
+  "keywords": [
+    "node",
+    "express",
+    "ecommerce",
+    "backend",
+    "handlebars",
+    "socket.io",
+    "websockets",
+    "mongodb",
+    "mongoose",
+    "pagination"
+  ],
   "author": "Ivanna Arzamendia",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "^4.19.2",
     "express-handlebars": "^7.1.3",
+    "mongoose": "^9.8.0",
+    "mongoose-paginate-v2": "^1.9.5",
     "socket.io": "^4.7.5"
   }
 }

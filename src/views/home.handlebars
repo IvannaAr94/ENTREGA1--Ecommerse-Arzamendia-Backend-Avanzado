@@ -1,22 +1,132 @@
+<!-- =====================================================
+     VISTA: home.handlebars
+     Portada principal del ecommerce IMAstyle.
+     ===================================================== -->
+
 <section class="hero">
-  <h2>Lista de productos</h2>
-  <p>Esta vista muestra todos los productos agregados hasta el momento usando Handlebars.</p>
+  <h2>Bienvenidos a IMAtecno</h2>
+
+  <p>
+    Encontrá productos de tecnología, electro, hogar y seguridad en un solo
+    lugar.
+  </p>
 </section>
 
-<section class="products-grid">
-  {{#if products.length}}
-    {{#each products}}
-      <article class="product-card">
-        <h3>{{this.title}}</h3>
-        <p>{{this.description}}</p>
-        <p><strong>ID:</strong> {{this.id}}</p>
-        <p><strong>Código:</strong> {{this.code}}</p>
-        <p><strong>Precio:</strong> ${{this.price}}</p>
-        <p><strong>Stock:</strong> {{this.stock}}</p>
-        <p><strong>Categoría:</strong> {{this.category}}</p>
-      </article>
-    {{/each}}
-  {{else}}
-    <p class="empty-message">Todavía no hay productos cargados.</p>
-  {{/if}}
+<!-- =====================================================
+     CATEGORÍAS PRINCIPALES
+     Cada tarjeta lleva directamente al catálogo filtrado.
+     ===================================================== -->
+
+<section class="categories-section">
+
+  <h2>Categorías destacadas</h2>
+
+  <div class="categories-grid">
+
+    <article class="category-card">
+      <h3>Tecnología</h3>
+
+      <p>
+        Accesorios, dispositivos, periféricos y productos tecnológicos.
+      </p>
+
+      <a href="/products?query=Tecnología" class="primary-button">
+        Ver productos
+      </a>
+    </article>
+
+    <article class="category-card">
+      <h3>Electro y Hogar</h3>
+
+      <p>
+        Productos pensados para facilitar las tareas del hogar.
+      </p>
+
+      <a href="/products?query=Electro y Hogar" class="primary-button">
+        Ver productos
+      </a>
+    </article>
+
+    <article class="category-card">
+      <h3>Seguridad y Vigilancia</h3>
+
+      <p>
+        Cámaras, alarmas y soluciones para proteger tus espacios.
+      </p>
+
+      <a href="/products?query=Seguridad y Vigilancia" class="primary-button">
+        Ver productos
+      </a>
+    </article>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     PRODUCTOS DESTACADOS
+     Muestra los productos cargados actualmente.
+     ===================================================== -->
+
+<section class="featured-section">
+
+  <div class="section-heading">
+    <div>
+      <h2>Productos destacados</h2>
+
+      <p>
+        Algunos de los productos disponibles en IMAstyle.
+      </p>
+    </div>
+
+    <a href="/products" class="secondary-button">
+      Ver catálogo completo
+    </a>
+  </div>
+
+  <div class="products-grid">
+
+    {{#if products.length}}
+
+      {{#each products}}
+
+        <article class="product-card">
+
+          <h3>{{this.title}}</h3>
+
+          <p>{{this.description}}</p>
+
+          <p>
+            <strong>Precio:</strong>
+            ${{this.price}}
+          </p>
+
+          <p>
+            <strong>Stock:</strong>
+            {{this.stock}}
+          </p>
+
+          <p>
+            <strong>Categoría:</strong>
+            {{this.category}}
+          </p>
+
+          <a href="/products/{{this._id}}" class="primary-button">
+            Ver detalle
+          </a>
+
+        </article>
+
+      {{/each}}
+
+    {{else}}
+
+      <p class="empty-message">
+        Todavía no hay productos cargados.
+      </p>
+
+    {{/if}}
+
+  </div>
+
 </section>

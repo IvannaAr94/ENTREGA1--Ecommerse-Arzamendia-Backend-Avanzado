@@ -1,0 +1,90 @@
+<!-- =====================================================
+     VISTA: cart.handlebars
+     Muestra un carrito específico con todos
+     sus productos.
+     ===================================================== -->
+
+{{#if error}}
+
+  <section class="hero">
+
+    <h2>Error</h2>
+
+    <p>{{error}}</p>
+
+    <a href="/products" class="primary-button">
+      Volver al catálogo
+    </a>
+
+  </section>
+
+{{else}}
+
+  <section class="hero">
+
+    <h2>Mi carrito</h2>
+
+    <p>
+      Carrito:
+      <strong>{{cart._id}}</strong>
+    </p>
+
+  </section>
+
+  <section class="products-grid">
+
+    {{#if products.length}}
+
+      {{#each products}}
+
+        <article class="product-card">
+
+          <h3>{{this.product.title}}</h3>
+
+          <p>{{this.product.description}}</p>
+
+          <p>
+            <strong>Precio:</strong>
+            ${{this.product.price}}
+          </p>
+
+          <p>
+            <strong>Categoría:</strong>
+            {{this.product.category}}
+          </p>
+
+          <p>
+            <strong>Cantidad:</strong>
+            {{this.quantity}}
+          </p>
+
+          <p>
+            <strong>Subtotal:</strong>
+            ${{this.product.price}}
+          </p>
+
+        </article>
+
+      {{/each}}
+
+    {{else}}
+
+      <p class="empty-message">
+
+        Este carrito todavía no tiene productos.
+
+      </p>
+
+    {{/if}}
+
+  </section>
+
+  <div style="margin-top:40px">
+
+    <a href="/products" class="primary-button">
+      Seguir comprando
+    </a>
+
+  </div>
+
+{{/if}}

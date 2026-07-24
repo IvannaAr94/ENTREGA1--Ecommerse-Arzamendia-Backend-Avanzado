@@ -1,0 +1,81 @@
+<!-- =====================================================
+     VISTA: productDetail.handlebars
+     Muestra toda la información de un producto.
+     ===================================================== -->
+
+{{#if error}}
+
+  <section class="hero">
+    <h2>Error</h2>
+    <p>{{error}}</p>
+
+    <a href="/products" class="primary-button">
+      Volver a productos
+    </a>
+  </section>
+
+{{else}}
+
+  <section class="hero">
+
+    <h2>{{product.title}}</h2>
+
+    <p>
+      {{product.description}}
+    </p>
+
+  </section>
+
+  <section class="product-detail-card">
+
+    <p>
+      <strong>Código:</strong>
+      {{product.code}}
+    </p>
+
+    <p>
+      <strong>Precio:</strong>
+      ${{product.price}}
+    </p>
+
+    <p>
+      <strong>Stock:</strong>
+      {{product.stock}}
+    </p>
+
+    <p>
+      <strong>Categoría:</strong>
+      {{product.category}}
+    </p>
+
+    <p>
+      <strong>Estado:</strong>
+
+      {{#if product.status}}
+        Disponible
+      {{else}}
+        No disponible
+      {{/if}}
+    </p>
+
+    <p>
+      <strong>ID:</strong>
+      {{product._id}}
+    </p>
+
+    <div class="buttons">
+
+      <!-- Lo conectaremos con el carrito más adelante -->
+      <button class="primary-button">
+        Agregar al carrito
+      </button>
+
+      <a href="/products" class="secondary-button">
+        Volver al catálogo
+      </a>
+
+    </div>
+
+  </section>
+
+{{/if}}

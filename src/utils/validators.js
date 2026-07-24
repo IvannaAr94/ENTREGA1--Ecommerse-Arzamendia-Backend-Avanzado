@@ -5,7 +5,7 @@
 // =====================================================
 
 export function validateProductFields(product) {
-  const requiredFields = ['title', 'description', 'code', 'price', 'status', 'stock', 'category'];
+  const requiredFields = ['title', 'description', 'code', 'price', 'stock', 'category'];
   const missingFields = requiredFields.filter((field) => product[field] === undefined || product[field] === '');
 
   if (missingFields.length > 0) {
