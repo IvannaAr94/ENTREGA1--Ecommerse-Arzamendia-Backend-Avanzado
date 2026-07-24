@@ -226,7 +226,7 @@ Ejemplos de uso:
 
 ## 👩‍💻 Autora
 
-**Ivanna Arzamendia**
+**Ivanna Micaela Arzamendia**
 
 Trabajo Final - Backend I
 
