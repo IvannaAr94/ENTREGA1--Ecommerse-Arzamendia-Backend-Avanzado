@@ -1,28 +1,16 @@
-# 🛒 IMAstyle
+# 🛒 IMAtecno
 
 ## Trabajo Final - Backend I
 
 Proyecto desarrollado para la entrega final de **Backend I - Coderhouse**.
 
-IMAstyle es un ecommerce desarrollado con **Node.js**, **Express**, **MongoDB**, **Mongoose**, **Handlebars** y **Socket.IO**, que permite administrar productos y carritos mediante una API REST y vistas dinámicas.
+IMAtecno es un ecommerce desarrollado con **Node.js**, **Express**, **MongoDB**, **Mongoose**, **Handlebars** y **Socket.IO**, que permite administrar productos y carritos mediante una API REST y vistas dinámicas.
 
 ---
 
 ## 🎯 Objetivo del proyecto
 
 Desarrollar un ecommerce completo utilizando Node.js, Express, MongoDB y Handlebars, aplicando una arquitectura basada en rutas, modelos y vistas dinámicas. El proyecto implementa una API REST, persistencia con MongoDB mediante Mongoose, actualización en tiempo real con Socket.IO y una interfaz web que permite gestionar productos y carritos.
-
----
-
-## 📸 Vista previa
-
-> 📌 Próximamente se agregarán capturas de pantalla del proyecto.
-
-- Home
-- Catálogo de productos
-- Detalle del producto
-- Carrito
-- Productos en tiempo real
 
 ---
 
@@ -105,6 +93,7 @@ src
 │
 ├── public
 │   ├── css
+│   ├── images
 │   └── js
 │
 ├── routes
@@ -113,6 +102,7 @@ src
 │   └── views.routes.js
 │
 ├── utils
+│   ├── productSearch.js
 │   └── validators.js
 │
 ├── views
@@ -156,10 +146,10 @@ Crear un archivo llamado `.env` en la raíz del proyecto con el siguiente conten
 
 ```env
 PORT=8080
-MONGO_URL=mongodb://127.0.0.1:27017/ecommerce_backend
+MONGO_URL=mongodb://127.0.0.1:27017/imatecno_backend
 ```
 
-> ⚠️ El archivo `.env` no se incluye en el repositorio por razones de seguridad.
+> ⚠️ El archivo `.env` no se incluye en el repositorio por razones de seguridad. En su lugar, se proporciona un archivo `.env.example` como referencia.
 
 ---
 
@@ -234,24 +224,10 @@ Ejemplos de uso:
 
 ---
 
-## 📷 Capturas
-
-> Se agregarán imágenes del proyecto una vez finalizado el diseño definitivo.
-
----
-
 ## 👩‍💻 Autora
 
 **Ivanna Arzamendia**
 
 Trabajo Final - Backend I
 
-Coderhouse
-
-2026
-
----
-
-## 📄 Licencia
-
-Proyecto realizado con fines exclusivamente académicos para la carrera de Desarrollo Backend de Coderhouse.
+Coderhouse - 2026
